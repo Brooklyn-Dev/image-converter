@@ -1,54 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/src/styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tauri App</title>
-    <script type="module" src="/src/main.ts" defer></script>
-    <style>
-      .logo.vite:hover {
-        filter: drop-shadow(0 0 2em #747bff);
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      .logo.typescript:hover {
-        filter: drop-shadow(0 0 2em #2d79c7);
-      }
-    </style>
-  </head>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
+		<link rel="stylesheet" href="/src/css/style.css" />
+		<!-- <link rel="shortcut icon" type="image/png" href="src-tauri/icons/32x32.png" /> -->
 
-  <body>
-    <div class="container">
-      <h1>Welcome to Tauri!</h1>
+		<title>Image Converter</title>
 
-      <div class="row">
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/src/assets/vite.svg" class="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://tauri.app" target="_blank">
-          <img
-            src="/src/assets/tauri.svg"
-            class="logo tauri"
-            alt="Tauri logo"
-          />
-        </a>
-        <a href="https://www.typescriptlang.org/docs" target="_blank">
-          <img
-            src="/src/assets/typescript.svg"
-            class="logo typescript"
-            alt="typescript logo"
-          />
-        </a>
-      </div>
+		<script type="module" src="/src/main.ts" defer></script>
+	</head>
 
-      <p>Click on the Tauri logo to learn more about the framework</p>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1 class="heading-primary">Image Converter</h1>
+			</div>
 
-      <form class="row" id="greet-form">
-        <input id="greet-input" placeholder="Enter a name..." />
-        <button type="submit">Greet</button>
-      </form>
+			<hr class="line" />
 
-      <p id="greet-msg"></p>
-    </div>
-  </body>
+			<div class="input-section">
+				<div class="input-section__group">
+					<label for="target" class="input-section__label">File to Convert:</label>
+					<input type="text" class="input-section__input" placeholder="path/to/example.jpg" id="target" />
+					<button class="btn">Locate</button>
+				</div>
+
+				<div class="input-section__group">
+					<label for="target" class="input-section__label">Output Directory:</label>
+					<input type="text" class="input-section__input" placeholder="output/directory/" id="out-dir" />
+					<button class="btn">Locate</button>
+				</div>
+
+				<div class="input-section__group">
+					<label for="target" class="input-section__label">Output Name:</label>
+					<input type="text" class="input-section__input" placeholder="example" id="out-name" />
+					<select class="dropdown">
+						<option value="AVIF">AVIF</option>
+						<option value="BMP">BMP</option>
+						<option value="GIF">GIF</option>
+						<option value="ICO">ICO</option>
+						<option value="JPEG">JPEG</option>
+						<option value="PNG">PNG</option>
+					</select>
+				</div>
+			</div>
+
+			<hr class="line" />
+
+			<div class="control-panel">
+				<div class="control-panel__btn-bar">
+					<button class="btn">Convert</button>
+					<button class="btn">Clear</button>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

@@ -1,0 +1,31 @@
+.input-section {
+	margin: 2rem 0;
+
+	&__group {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	&__label {
+		width: 130px;
+	}
+
+	&__input {
+		width: 160px;
+		margin-right: 1.6rem;
+
+		border: none;
+		border-radius: 2px;
+		background-color: var(--colour-grey-dark-1);
+
+		padding-left: 0.5rem;
+		color: var(--colour-text);
+
+		&::placeholder {
+			color: var(--colour-grey-dark-3);
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.control-panel {
+	margin-top: 1rem;
+
+	display: flex;
+	justify-content: end;
+
+	&__btn-bar {
+		display: flex;
+		gap: 1rem;
+	}
+}
