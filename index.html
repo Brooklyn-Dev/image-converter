@@ -24,20 +24,30 @@
 			<div class="input-section">
 				<div class="input-section__group">
 					<label for="target" class="input-section__label">File to Convert:</label>
-					<input type="text" class="input-section__input" placeholder="path/to/example.jpg" id="target" />
-					<button class="btn">Locate</button>
+					<input
+						type="text"
+						class="input-section__input"
+						placeholder="path/to/example.jpg"
+						id="target-input"
+					/>
+					<button class="btn" id="target-btn">Locate</button>
 				</div>
 
 				<div class="input-section__group">
-					<label for="target" class="input-section__label">Output Directory:</label>
-					<input type="text" class="input-section__input" placeholder="output/directory/" id="out-dir" />
-					<button class="btn">Locate</button>
+					<label for="out-dir" class="input-section__label">Output Directory:</label>
+					<input
+						type="text"
+						class="input-section__input"
+						placeholder="output/directory/"
+						id="out-dir-input"
+					/>
+					<button class="btn" id="out-dir-btn">Locate</button>
 				</div>
 
 				<div class="input-section__group">
-					<label for="target" class="input-section__label">Output Name:</label>
-					<input type="text" class="input-section__input" placeholder="example" id="out-name" />
-					<select class="dropdown">
+					<label for="out-name" class="input-section__label">Output Name:</label>
+					<input type="text" class="input-section__input" placeholder="example" id="out-name-input" />
+					<select class="dropdown" id="out-name-dropdown">
 						<option value="AVIF">AVIF</option>
 						<option value="BMP">BMP</option>
 						<option value="GIF">GIF</option>
@@ -52,8 +62,8 @@
 
 			<div class="control-panel">
 				<div class="control-panel__btn-bar">
-					<button class="btn">Convert</button>
-					<button class="btn">Clear</button>
+					<button class="btn" id="convert-btn">Convert</button>
+					<button class="btn" id="clear-btn">Clear</button>
 				</div>
 			</div>
 		</div>

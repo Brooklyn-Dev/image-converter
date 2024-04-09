@@ -1,22 +1,36 @@
 import { invoke } from "@tauri-apps/api/tauri";
 
-let greetInputEl: HTMLInputElement | null;
-let greetMsgEl: HTMLElement | null;
+let targetFileInputEl: HTMLInputElement | null;
+let targetFileButtonEl: HTMLButtonElement | null;
+let outputDirInputEl: HTMLInputElement | null;
+let outputDirButtonEl: HTMLButtonElement | null;
+let outputNameInputEl: HTMLButtonElement | null;
+let outputTypeDropdownEl: HTMLSelectElement | null;
 
-async function greet() {
-  if (greetMsgEl && greetInputEl) {
-    // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-    greetMsgEl.textContent = await invoke("greet", {
-      name: greetInputEl.value,
-    });
-  }
+let convertButtonEl: HTMLButtonElement | null;
+let clearButtonEl: HTMLButtonElement | null;
+
+async function clearInputs() {
+	if (targetFileInputEl && outputDirInputEl && outputNameInputEl) {
+		targetFileInputEl.value = ""; // !.
+		outputDirInputEl.value = "";
+		outputNameInputEl.value = "";
+	}
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  greetInputEl = document.querySelector("#greet-input");
-  greetMsgEl = document.querySelector("#greet-msg");
-  document.querySelector("#greet-form")?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    greet();
-  });
+	targetFileInputEl = document.querySelector("#target-input");
+	targetFileButtonEl = document.querySelector("#target-btn");
+	outputDirInputEl = document.querySelector("#out-dir-input");
+	outputDirButtonEl = document.querySelector("#out-dir-btn");
+	outputNameInputEl = document.querySelector("#out-name-input");
+	outputTypeDropdownEl = document.querySelector("#out-name-btn");
+
+	convertButtonEl = document.querySelector("#convert-btn");
+	clearButtonEl = document.querySelector("#clear-btn");
+
+	clearButtonEl?.addEventListener("click", (e) => {
+		e.preventDefault();
+		clearInputs();
+	});
 });
