@@ -40,6 +40,12 @@ body {
   border: 0;
   border-top: 1px solid var(--colour-line); }
 
+.u-red-text {
+  color: red !important; }
+
+.u-green-text {
+  color: green !important; }
+
 .btn {
   background-color: var(--colour-grey-dark-3);
   color: var(--colour-grey-light-4);
@@ -54,6 +60,8 @@ body {
   margin-top: 1rem;
   display: flex;
   justify-content: end; }
+  .control-panel__result-msg {
+    margin-right: auto; }
   .control-panel__btn-bar {
     display: flex;
     gap: 1rem; }

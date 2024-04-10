@@ -4,6 +4,10 @@
 	display: flex;
 	justify-content: end;
 
+	&__result-msg {
+		margin-right: auto;
+	}
+
 	&__btn-bar {
 		display: flex;
 		gap: 1rem;
