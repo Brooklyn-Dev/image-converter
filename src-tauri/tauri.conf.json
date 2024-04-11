@@ -21,7 +21,7 @@
 		"windows": [
 			{
 				"title": "Image Converter",
-				"width": 425,
+				"width": 480,
 				"height": 200,
 				"fullscreen": false,
 				"resizable": false

@@ -8,7 +8,7 @@
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"tauri": "tauri",
-    "tauri-dev": "tauri dev",
+		"tauri-dev": "tauri dev",
 		"start": "npm-run-all --parallel tauri-dev watch:sass",
 		"watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
 		"compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",

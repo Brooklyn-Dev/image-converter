@@ -41,16 +41,21 @@ async function selectOutputDirectory() {
 }
 
 async function convertFile() {
-	if (!(targetFileInputEl!.value.trim() && outputDirInputEl!.value.trim() && outputNameInputEl!.value.trim())) {
+	if (
+		!(
+			targetFileInputEl!.value.trim() &&
+			outputDirInputEl!.value.trim() &&
+			outputNameInputEl!.value.trim() &&
+			outputTypeDropdownEl!.value.trim()
+		)
+	) {
 		setResultMessage("Fill in all the inputs before converting", false);
 		return;
 	}
 
 	const result: [resultMessage: string, success: boolean] = await invoke("convert_image_file", {
-		imgPath: targetFileInputEl!.value,
-		outDir: outputDirInputEl!.value,
-		outName: outputNameInputEl!.value,
-		outType: outputTypeDropdownEl!.value,
+		initFilePath: targetFileInputEl!.value,
+		outFilePath: `${outputDirInputEl!.value}\\${outputNameInputEl!.value}.${outputTypeDropdownEl!.value}`,
 	});
 
 	const [resultMessage, success] = result;
