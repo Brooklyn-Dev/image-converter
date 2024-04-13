@@ -2,13 +2,13 @@
 	"build": {
 		"beforeDevCommand": "npm run dev",
 		"beforeBuildCommand": "npm run build",
-		"devPath": "http://localhost:1420",
+		"devPath": "../dist",
 		"distDir": "../dist",
 		"withGlobalTauri": true
 	},
 	"package": {
 		"productName": "image-converter",
-		"version": "0.1.0"
+		"version": "1.0.0"
 	},
 	"tauri": {
 		"allowlist": {
